@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prismit株式会社 | 公式サイト</title>
+<meta name="description" content="Prismit株式会社の公式サイトです。事業内容、会社概要、お知らせ、お問い合わせをご案内しています。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">Prismit</a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <ul>
+        <li><a href="#about">会社概要</a></li>
+        <li><a href="#services">事業内容</a></li>
+        <li><a href="#news">お知らせ</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Prismit株式会社</p>
+      <h1>小さな一歩に、確かな輝きを。</h1>
+      <p class="hero-lead">私たちは、テクノロジーとアイデアで、お客様の事業に新しい価値を届けます。</p>
+      <a href="#contact" class="btn btn-primary">お問い合わせはこちら</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">会社概要</h2>
+      <p class="section-lead">私たちが大切にしていること、そして歩んできた道のりをご紹介します。</p>
+
+      <div class="about-grid">
+        <div class="about-philosophy">
+          <h3>企業理念</h3>
+          <p>
+            「Prism（プリズム）」のように、一つの光から多様な可能性を生み出す。
+            私たちはお客様一人ひとりの課題に真摯に向き合い、最適な解決策を届けることを使命としています。
+          </p>
+        </div>
+
+        <table class="info-table">
+          <tbody>
+            <tr>
+              <th>会社名</th>
+              <td>Prismit株式会社</td>
+            </tr>
+            <tr>
+              <th>設立</th>
+              <td>2022年4月</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>代表取締役　山田 太郎</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>〒100-0001<br>東京都千代田区千代田1-1-1 サンプルビル5F</td>
+            </tr>
+            <tr>
+              <th>事業内容</th>
+              <td>Webサイト・システムの企画、開発、運用</td>
+            </tr>
+            <tr>
+              <th>連絡先</th>
+              <td>info@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">事業内容</h2>
+      <p class="section-lead">お客様のニーズに合わせて、幅広いサービスをご提供しています。</p>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Webサイト制作</h3>
+          <p>企業サイトからランディングページまで、目的に合わせたWebサイトを企画・制作します。</p>
+        </article>
+        <article class="service-card">
+          <h3>システム開発</h3>
+          <p>業務効率化のための各種業務システム、Webアプリケーションを開発します。</p>
+        </article>
+        <article class="service-card">
+          <h3>運用・保守サポート</h3>
+          <p>公開後の更新作業や不具合対応まで、安心してお任せいただける体制を整えています。</p>
+        </article>
+        <article class="service-card">
+          <h3>コンサルティング</h3>
+          <p>DX推進やIT活用について、企画段階から伴走してサポートいたします。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="section">
+    <div class="container">
+      <h2 class="section-title">お知らせ</h2>
+      <p class="section-lead">最新のニュースやお知らせをお届けします。</p>
+
+      <ul class="news-list">
+        <li class="news-item">
+          <time datetime="2026-08-01">2026.08.01</time>
+          <span class="news-tag">お知らせ</span>
+          <p>公式サイトを公開しました。</p>
+        </li>
+        <li class="news-item">
+          <time datetime="2026-07-01">2026.07.01</time>
+          <span class="news-tag">プレスリリース</span>
+          <p>夏季休業のお知らせ（8月13日〜8月16日）。</p>
+        </li>
+        <li class="news-item">
+          <time datetime="2026-04-01">2026.04.01</time>
+          <span class="news-tag">お知らせ</span>
+          <p>新オフィスへ移転しました。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="section-lead">ご質問・ご相談など、お気軽にお問い合わせください。</p>
+
+      <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-row">
+          <label for="name">お名前<span class="required">必須</span></label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">メールアドレス<span class="required">必須</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="subject">件名</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="form-row">
+          <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">送信する</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Prismit株式会社</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
