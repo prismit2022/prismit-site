@@ -1,6 +1,6 @@
 # prismit-site
 
-Prismit株式会社の公式サイト（静的HTML/CSS/JS、GitHub Pagesでホスティング）。
+Prismit(屋号)の公式サイト(静的HTML/CSS/JS、GitHub Pagesでホスティング)。
 
 ## ローカルプレビュー
 
