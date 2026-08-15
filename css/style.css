@@ -450,23 +450,29 @@ img {
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 14px 18px;
-  background: var(--color-primary-tint);
-  border: 1.5px solid var(--color-primary);
-  border-radius: var(--radius);
+  gap: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--color-border);
 }
 
 .service-detail-header .service-icon {
   flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   margin-bottom: 0;
   color: #fff;
   background: var(--color-primary);
 }
 
-.service-detail-block:nth-child(even) .service-detail-header {
-  background: var(--color-accent-tint);
-  border-color: var(--color-accent);
+.service-detail-header .service-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.service-detail-header h3 {
+  font-size: 1.35rem;
 }
 
 .service-detail-block:nth-child(even) .service-detail-header .service-icon {
