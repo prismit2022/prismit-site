@@ -425,28 +425,64 @@ img {
 
 .service-detail-block {
   display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 20px;
-  padding: 32px 0;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+  padding: 40px 0;
   border-bottom: 1px solid var(--color-border);
   scroll-margin-top: 84px;
 }
 
-.service-detail-block .service-icon {
+.service-detail-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 260px;
+}
+
+.service-detail-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-detail-header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: var(--color-primary-tint);
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius);
+}
+
+.service-detail-header .service-icon {
+  flex-shrink: 0;
   margin-bottom: 0;
+  color: #fff;
+  background: var(--color-primary);
 }
 
-.service-detail-block:nth-child(even) .service-icon {
-  color: var(--color-accent);
+.service-detail-block:nth-child(even) .service-detail-header {
   background: var(--color-accent-tint);
+  border-color: var(--color-accent);
 }
 
-.service-detail-block h3 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
+.service-detail-block:nth-child(even) .service-detail-header .service-icon {
+  background: var(--color-accent);
 }
 
-.service-detail-block p {
+.service-detail-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.service-detail-body {
+  max-width: 640px;
+}
+
+.service-detail-body p {
   margin: 0;
   color: var(--color-text-muted);
 }
@@ -602,6 +638,13 @@ img {
   margin-left: 8px;
 }
 
+.optional {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
 .form-row input,
 .form-row textarea {
   width: 100%;
@@ -714,6 +757,14 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .service-detail-block {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-image {
+    order: -1;
+  }
+
   .info-table th {
     width: 38%;
   }
@@ -723,10 +774,6 @@ img {
     gap: 6px;
   }
 
-  .service-detail-block {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
 
   .section-head {
     flex-direction: column;
