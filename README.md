@@ -22,5 +22,5 @@ python -m http.server 8000
 ## 編集箇所
 
 - `index.html` — 会社名・キャッチコピー・会社概要・事業内容・お知らせ・お問い合わせフォームの各テキストはすべてダミー内容です。実際の内容に差し替えてください。
-- `#contact` のフォーム `action` は Formspree のプレースホルダーです。[formspree.io](https://formspree.io) で無料アカウントを作成し、発行されたフォームIDに差し替えてください（GitHub Pagesは静的サイトのため、フォーム送信の受け皿として外部の無料サービスが必要です）。
+- `#contact` のフォーム `action` は Formspree(無料プラン)のエンドポイントに設定済みです。送信されたお問い合わせは、Formspreeに登録したメールアドレスに通知されます。フォームIDを変更したい場合は [formspree.io](https://formspree.io) のダッシュボードで確認してください。
 - `css/style.css` — 配色は `:root` 内の変数（`--color-primary` など）を変更すると全体に反映されます。
