@@ -91,4 +91,41 @@ document.addEventListener("DOMContentLoaded", () => {
     goTo(0);
     start();
   }
+
+  const contactForm = document.getElementById("contactForm");
+  const formStatus = document.getElementById("formStatus");
+
+  if (contactForm && formStatus) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector("button[type=submit]");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "送信中...";
+      formStatus.className = "form-status";
+      formStatus.textContent = "";
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          formStatus.textContent = "お問い合わせを受け付けました。ご連絡ありがとうございます。";
+          formStatus.className = "form-status form-status-success";
+        } else {
+          formStatus.textContent = "送信に失敗しました。時間をおいて再度お試しいただくか、直接メールにてご連絡ください。";
+          formStatus.className = "form-status form-status-error";
+        }
+      } catch (err) {
+        formStatus.textContent = "送信に失敗しました。時間をおいて再度お試しいただくか、直接メールにてご連絡ください。";
+        formStatus.className = "form-status form-status-error";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "送信する";
+      }
+    });
+  }
 });

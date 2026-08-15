@@ -620,6 +620,30 @@ img {
   max-width: 560px;
 }
 
+.form-status {
+  display: none;
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.form-status:not(:empty) {
+  display: block;
+}
+
+.form-status-success {
+  background: var(--color-accent-tint);
+  color: var(--color-text);
+  border-left: 3px solid var(--color-accent);
+}
+
+.form-status-error {
+  background: #fdeaea;
+  color: var(--color-danger);
+  border-left: 3px solid var(--color-danger);
+}
+
 .form-row {
   margin-bottom: 20px;
 }
