@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="852" height="816" viewBox="0 0 852 816">
+  <title>Prismit Logo Mark</title>
+
+  <g fill="none"
+     stroke="#4D7FED"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <!-- 外周二重円 -->
+    <circle cx="420" cy="406" r="330"/>
+    <circle cx="420" cy="406" r="314"/>
+
+    <!-- 上部のプリズム線 -->
+    <path d="M313 327 L420 94 L528 327"/>
+
+    <!-- 下部へ伸びる左右線 -->
+    <path d="M248 470 L187 602"/>
+    <path d="M593 470 L655 602"/>
+
+    <!-- 下部楕円 -->
+    <ellipse cx="420" cy="603" rx="234" ry="67"/>
+
+    <!-- 楕円下側から外周下部へつなぐ弧 -->
+    <path d="M187 603
+             C220 668, 315 718, 420 719
+             C525 718, 620 668, 655 603"/>
+  </g>
+</svg>
