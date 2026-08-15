@@ -23,10 +23,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let index = 0;
     let timer = null;
+    let resizeTimer = null;
+    let sliderWidth = 0;
+
+    const measure = () => {
+      sliderWidth = heroSlider.clientWidth;
+      heroTrack.style.width = `${sliderWidth * slides.length}px`;
+      slides.forEach((slide) => {
+        slide.style.width = `${sliderWidth}px`;
+      });
+    };
+
+    const applyTransform = () => {
+      heroTrack.style.transform = `translateX(-${index * sliderWidth}px)`;
+    };
 
     const goTo = (target) => {
       index = (target + slides.length) % slides.length;
-      heroTrack.style.transform = `translateX(-${index * 100}%)`;
+      applyTransform();
 
       slides.forEach((slide, i) => {
         const isActive = i === index;
@@ -65,6 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
     heroSlider.addEventListener("focusin", stop);
     heroSlider.addEventListener("focusout", start);
 
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        measure();
+        applyTransform();
+      }, 150);
+    });
+
+    measure();
     goTo(0);
     start();
   }

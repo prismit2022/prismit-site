@@ -133,11 +133,12 @@ img {
 
 .hero-track {
   display: flex;
+  align-items: stretch;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-slide {
-  flex: 0 0 100%;
+  flex: none;
   min-width: 0;
 }
 
