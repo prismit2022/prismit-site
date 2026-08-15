@@ -361,10 +361,6 @@ img {
   white-space: nowrap;
 }
 
-.role-label {
-  display: inline-block;
-  width: 5.5em;
-}
 
 /* Services */
 .services-grid {
