@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | Prismit</title>
+<meta name="description" content="Prismitへのお問い合わせはこちらのフォームからご連絡ください。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Prismit</a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <ul>
+        <li><a href="about.html">会社概要</a></li>
+        <li><a href="services.html">事業内容</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+        <li><a href="contact.html" class="is-active" aria-current="page">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>お問い合わせ</h1>
+      <p>ご質問・ご相談など、お気軽にお問い合わせください。</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <form class="contact-form" action="https://formspree.io/f/mgawzjan" method="POST">
+        <div class="form-row">
+          <label for="name">お名前<span class="required">必須</span></label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">メールアドレス<span class="required">必須</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="subject">件名</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="form-row">
+          <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">送信する</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Prismit</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
