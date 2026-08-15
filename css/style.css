@@ -127,11 +127,57 @@ img {
   color: #fff;
 }
 
+.hero-slider {
+  overflow: hidden;
+}
+
+.hero-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
 .hero-inner {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 48px;
   align-items: center;
+}
+
+.hero-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: background-color 0.2s ease, width 0.2s ease;
+}
+
+.hero-dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.hero-dot.is-active {
+  width: 22px;
+  background: #fff;
+}
+
+.hero-dot:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 .hero-eyebrow {
@@ -471,6 +517,10 @@ img {
   .service-card:hover {
     transition: none;
     transform: none;
+  }
+
+  .hero-track {
+    transition: none;
   }
 }
 
