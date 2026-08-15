@@ -31,7 +31,7 @@ python -m http.server 8000
 
 ## 写真について
 
-`index.html` と `about.html` の写真は [Lorem Picsum](https://picsum.photos) の無料プレースホルダー画像です(実際の御社の写真ではありません)。本物の写真に差し替える場合は、画像ファイルを `images/` フォルダなどに置き、該当する `<img src="...">` と `alt` テキストを差し替えてください。
+`index.html` と `about.html` の写真は [Unsplash](https://unsplash.com) のフリー素材(IT・開発をイメージしたコード画面の写真)です(実際の御社の写真ではありません)。本物の写真に差し替える場合は、画像ファイルを `images/` フォルダなどに置き、該当する `<img src="...">` と `alt` テキストを差し替えてください。
 
 ## 編集箇所
 
