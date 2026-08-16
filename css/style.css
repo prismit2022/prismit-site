@@ -353,11 +353,8 @@ img {
 }
 
 /* About */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 48px;
-  align-items: start;
+.about-philosophy {
+  margin-bottom: 56px;
 }
 
 .about-philosophy h3 {
@@ -366,12 +363,50 @@ img {
 
 .about-philosophy p {
   color: var(--color-text-muted);
+  max-width: 720px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+.about-logo-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-name-note {
+  margin-bottom: 16px;
+}
+
+.about-name-note strong {
+  color: var(--color-text);
+}
+
+.about-name-breakdown {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.about-name-breakdown li + li {
+  margin-top: 8px;
+}
+
+.about-name-breakdown strong {
+  color: var(--color-text);
 }
 
 .about-logo-mark {
-  width: 340px;
+  display: block;
+  width: 380px;
+  max-width: 100%;
   height: auto;
-  margin: 40px 0 0 25px;
   opacity: 0.85;
 }
 
