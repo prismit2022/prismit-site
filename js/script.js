@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (heroSlider && heroTrack) {
     const slides = heroTrack.querySelectorAll(".hero-slide");
     const dots = document.querySelectorAll("#heroDots .hero-dot");
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let index = 0;
     let timer = null;
     let resizeTimer = null;
@@ -62,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const start = () => {
-      if (prefersReducedMotion || slides.length < 2) return;
+      if (slides.length < 2) return;
       stop();
       timer = setInterval(() => goTo(index + 1), 6000);
     };
