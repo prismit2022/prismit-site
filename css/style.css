@@ -382,7 +382,6 @@ img {
 
 .about-philosophy p {
   color: var(--color-text-muted);
-  max-width: 720px;
 }
 
 .about-grid {
@@ -402,6 +401,7 @@ img {
   margin-bottom: 28px;
   font-size: 1.02rem;
   line-height: 1.85;
+  text-wrap: pretty;
 }
 
 .about-name-note strong {
@@ -491,6 +491,7 @@ img {
   font-size: 1.04rem;
   font-style: italic;
   line-height: 1.9;
+  text-wrap: pretty;
 }
 
 .about-mission::before {
