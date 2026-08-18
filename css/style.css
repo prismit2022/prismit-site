@@ -9,6 +9,8 @@
   --color-primary-tint: #e7edfc;
   --color-accent: #0d8f82;
   --color-accent-tint: #e2f5f3;
+  --color-violet: #7c3aed;
+  --color-violet-tint: #f1eafe;
   --color-danger: #c23b3b;
   --max-width: 1080px;
   --radius: 10px;
@@ -357,8 +359,25 @@ img {
   margin-bottom: 56px;
 }
 
+.about-philosophy .eyebrow {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 10px;
+}
+
 .about-philosophy h3 {
   margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 1.85rem;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  color: var(--color-primary-dark);
+  background: linear-gradient(100deg, var(--color-primary) 0%, var(--color-accent) 55%, var(--color-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about-philosophy p {
@@ -380,26 +399,114 @@ img {
 }
 
 .about-name-note {
-  margin-bottom: 16px;
+  margin-bottom: 28px;
+  font-size: 1.02rem;
+  line-height: 1.85;
 }
 
 .about-name-note strong {
-  color: var(--color-text);
+  font-size: 1.15em;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  background: linear-gradient(100deg, var(--color-primary) 0%, var(--color-accent) 55%, var(--color-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.about-name-breakdown {
-  margin: 0 0 20px;
-  padding-left: 20px;
-  color: var(--color-text-muted);
+.prism-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 0 32px;
+}
+
+.prism-item {
+  position: relative;
+  padding: 30px 22px 24px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 18px rgba(20, 24, 31, 0.05);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.prism-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--item-gradient);
+}
+
+.prism-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(20, 24, 31, 0.1);
+}
+
+.prism-item-badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: var(--item-gradient);
+  color: #fff;
   font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
-.about-name-breakdown li + li {
-  margin-top: 8px;
+.prism-item p {
+  margin: 0;
+  max-width: none;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
 }
 
-.about-name-breakdown strong {
+.prism-item--blue {
+  --item-gradient: linear-gradient(135deg, var(--color-primary), #6a93f0);
+}
+
+.prism-item--teal {
+  --item-gradient: linear-gradient(135deg, var(--color-accent), #34d6c4);
+}
+
+.prism-item--violet {
+  --item-gradient: linear-gradient(135deg, var(--color-violet), #b18af5);
+}
+
+.about-mission {
+  position: relative;
+  max-width: 720px;
+  margin: 0;
+  padding: 28px 32px 26px 58px;
+  border-radius: 14px;
+  background: var(--color-bg-alt);
   color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.04rem;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+.about-mission::before {
+  content: "\201C";
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.55;
 }
 
 .about-logo-mark {
@@ -855,6 +962,10 @@ img {
   }
 
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prism-breakdown {
     grid-template-columns: 1fr;
   }
 
