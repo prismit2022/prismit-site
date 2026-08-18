@@ -670,11 +670,17 @@ img {
 .service-detail-body p {
   margin: 0;
   color: var(--color-text-muted);
+  line-height: 1.9;
+}
+
+.service-detail-body strong {
+  color: var(--color-text);
+  font-weight: 700;
 }
 
 .service-detail-block p + p,
 .service-detail-block ul + p {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 
 .service-detail-block p.client-note {
