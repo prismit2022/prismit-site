@@ -481,7 +481,7 @@ img {
 
 .about-mission {
   position: relative;
-  max-width: 720px;
+  max-width: none;
   margin: 0;
   padding: 28px 32px 26px 58px;
   border-radius: 14px;
