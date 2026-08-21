@@ -22,7 +22,7 @@ python -m http.server 8000
 ## ページ構成
 
 - `index.html` — トップページ(ヒーロー+各ページの要約とリンク)
-- `about.html` — 会社概要
+- `about.html` — Prismitについて
 - `services.html` — 事業内容
 - `news.html` — お知らせ
 - `contact.html` — お問い合わせフォーム
@@ -35,6 +35,6 @@ python -m http.server 8000
 
 ## 編集箇所
 
-- 会社名・キャッチコピー・会社概要・事業内容・お知らせ・お問い合わせフォームの各テキストはすべてダミー内容です。実際の内容に差し替えてください。
+- 屋号・キャッチコピー・Prismitについて・事業内容・お知らせ・お問い合わせフォームの各テキストはすべてダミー内容です。実際の内容に差し替えてください。
 - `#contact` のフォーム `action` は Formspree(無料プラン)のエンドポイントに設定済みです。送信されたお問い合わせは、Formspreeに登録したメールアドレスに通知されます。フォームIDを変更したい場合は [formspree.io](https://formspree.io) のダッシュボードで確認してください。
 - `css/style.css` — 配色は `:root` 内の変数(`--color-primary` など)を変更すると全体に反映されます。
